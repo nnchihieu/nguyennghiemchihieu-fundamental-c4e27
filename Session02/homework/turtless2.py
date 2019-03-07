@@ -1,14 +1,14 @@
 # #1
-from turtle import *
-speed(1)
-color("red")
-right(30)
-for i in range(4):
-    for j in range(4):
-        forward(50)
-        if(j%2!=0): left(120)
-        else: left(60)
-    left(90)
+# from turtle import *
+# speed(1)
+# color("red")
+# right(30)
+# for i in range(4):
+#     for j in range(4):
+#         forward(50)
+#         if(j%2!=0): left(120)
+#         else: left(60)
+#     left(90)
 
 #2
 from turtle import *
