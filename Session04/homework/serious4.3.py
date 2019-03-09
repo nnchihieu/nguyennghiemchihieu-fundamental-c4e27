@@ -1,27 +1,33 @@
-print('quiz')
-question = 'if x = 8, then what is the value of 4(x + 3)?\n'
-options = '1. 35\n2. 36\n3. 40\n4. 44\n'
-print(question)
-print(options)
+print("answer quiz: ")
+quiz_1 = {'question':'if x = 8, then what is the value of 4(x + 3)?',
+         1: 35,
+         2: 36,
+         3: 40,
+         4: 44
+}
+number_of_correct_answers = 0
 
-while True:
-    choice = input("please choose '1', '2', '3', '4'\n")
-
-    if choice == '4':
+print("first quiz: ", quiz_1)
+for i, j in quiz_1.items():
+    print(i, j)
+    n = int(input("Your choice is: "))
+    if n == 4:
         print('bingo')
+        number_of_correct_answers +=1
         break
     else: print(':(')
     while True:
-        choice = input("please choose again '1', '2', '3', '4'\n")
-        if choice == '4':
+        n = int(input("please choose again: "))
+        if n == 4:
             print('bingo')
+            number_of_correct_answers +=1
+            stop = True
             break
         else:
             print(':(\nYou ran out of your attempts')
             stop = True
             break
-    break 
-
+    break
 
 
 

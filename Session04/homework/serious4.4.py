@@ -1,43 +1,61 @@
-print("quiz")
-print("question:\nif x = 8, then what is the value of 4(x + 3)?\n")
-print("options:\n1. 35\n2. 36\n3. 40\n4. 44\n")
+print("answer quiz: ")
+quiz = []
+quiz_1 = {'question':'if x = 8, then what is the value of 4(x + 3)?',
+         1: 35,
+         2: 36,
+         3: 40,
+         4: 44
+}
+quiz_2 = {'question':'Jack scored these marks in 5 math tests: 49, 81, 72, 66 and 52. What is the mean?', 
+         1: 'About 55',
+         2: 'About 65',
+         3: 'About 75',
+         4: 'About 85'
+}
+quiz.append(quiz_1)
+quiz.append(quiz_2)
+number_of_correct_answers = 0
 
-while True:
-    choice = input("please choose '1', '2', '3', '4'\n")
-
-    if choice == '4':
+print("first quiz: ", quiz_1)
+for i, j in quiz_1.items():
+    print(i,':', j)
+    n = int(input("Your choice is: "))
+    if n == 4:
         print('bingo')
+        number_of_correct_answers +=1
         break
     else: print(':(')
     while True:
-        choice = input("please choose again '1', '2', '3', '4'\n")
-        if choice == '4':
+        n = int(input("please choose again: "))
+        if n == 4:
             print('bingo')
+            number_of_correct_answers +=1
             stop = True
             break
         else:
             print(':(\nYou ran out of your attempts')
             stop = True
             break
-    if stop:
-        break
+    break
 
 while True:
-    next = input("Go to the next question?\nChoose 'y' for yes and 'n' for no.\n")
+    next = input("Go to the next quiz?\nChoose 'y' for yes and 'n' for no.\n")
     if next == 'y':
-        print("Question:\n Jack scored these marks in 5 math tests: 49, 81, 72, 66 and 52. What is the mean?")
-        print("Options:\n 1. About 55\n2. About 65\n3. About 75\n4.About 85\n")
-
-        while True:
-            choice = input("please choose '1', '2', '3', '4'\n")
-            if choice == '2':
+        print("second quiz: ", quiz_2)
+        for h, k in quiz_2.items():
+            print(h,':', k)
+        while True: 
+            n = int(input("Your choice is: "))
+            if n == 2:
                 print('bingo')
+                number_of_correct_answers +=1
                 break
             else: print(':(')
             while True:
-                choice = input("please choose again '1', '2', '3', '4'\n")
-                if choice == '2':
+                n = int(input("please choose again: "))
+                if n == 2:
                     print('bingo')
+                    number_of_correct_answers +=1
                     stop = True
                     break
                 else: 
@@ -51,6 +69,7 @@ while True:
         break
     else: print("INVALID INPUT! Only 'y' of 'n' for your choice")
     break
+print('The number of correct answer', number_of_correct_answers, 'from', len(quiz), 'question')
 
         
 
