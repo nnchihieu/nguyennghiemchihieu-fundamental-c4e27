@@ -39,7 +39,7 @@ for i, j in quiz_1.items():
     break
 
 while True:
-    next = input("Go to the next quiz?\nChoose 'y' for yes and 'n' for no.\n")
+    next = input("Go to the next quiz?\nChoose 'y' for yes or 'n' for no.\n")
     if next == 'y':
         print("second quiz: ", quiz_2)
         for h, k in quiz_2.items():
@@ -67,7 +67,7 @@ while True:
         break
     elif next == 'n':
         break
-    else: print("INVALID INPUT! Only 'y' of 'n' for your choice")
+    else: print("INVALID INPUT! Only 'y' or 'n' for your choice")
     break
 print('The number of correct answer', number_of_correct_answers, 'from', len(quiz), 'question')
 
